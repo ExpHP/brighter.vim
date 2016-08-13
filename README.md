@@ -27,15 +27,15 @@ If you want a couple of colors to be taken from the default color schemes,
 you can specify overrides:
 
 ```vim
-    " prior to setting the colorscheme
-    let g:brighter_use_dark = ['comment']
-    let g:brighter_use_light = ['special']
+" prior to setting the colorscheme
+let g:brighter_use_dark = ['comment']
+let g:brighter_use_light = ['special']
 ```
 
 Personally, I don't like my default yellow, and so I make it dark yellow:
 
 ```vim
-    let g:brighter_use_light = ['statement']
+let g:brighter_use_light = ['statement']
 ```
 
 However, 16-color mode is too limiting for most plugins,
@@ -49,8 +49,8 @@ Hence, for this exceedingly specific issue,
 `brighter.vim` has an *additional* option to force Brown into submission.
 
 ```vim
-    set t_Co=256
-    let g:brighter_use_light = ['statement']
-    let g:brighter_brown_16 = 1
+set t_Co=256
+let g:brighter_use_light = ['statement']
+let g:brighter_brown_16 = 1
 ```
 
