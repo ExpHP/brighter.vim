@@ -22,41 +22,6 @@ To activate it:
 
     :colorscheme brighter
 
-## Configuration
-
-If you want a couple of colors to be taken from the default color schemes,
-you can specify overrides:
-
-```vim
-" prior to setting the colorscheme
-let g:brighter_use_dark = ['comment']
-let g:brighter_use_light = ['special']
-```
-
-Personally, I don't like my default yellow,
-and so I make it dark yellow:
-
-```vim
-let g:brighter_use_light = ['statement']
-```
-
-Unfortunately, there is something funny about the
-default bg=light Statement color,
-which is that it is the *only color in the light theme
-that does not map to a 16-color color in 256 color mode*
-(instead mapping to an awful brown).
-
-Because 16-color mode is too limiting for many plugins,
-`brighter.vim` has an *additional* option to replace that nasty brown
-with the 16-color dark yellow.
-
-```vim
-set t_Co=256
-let g:brighter_use_light = ['statement']
-let g:brighter_brown_16 = 1 "note: no visible impact without the above lines
-```
-
-
 ## Screenshots
 
 **Your mileage may vary!!**
@@ -69,11 +34,59 @@ hence, these screenshots are only useful as a *comparison*.
 * All images use the default terminal background for Ubuntu 16.04 LTS.
 * All images have the `gnome-terminal` theme set to Tango.
 
-|     |     |
+
+| brighter (no overrides) | brighter (with my settings) |
 | --- | --- |
-| **brighter** (no overrides) | **brighter** (with my settings) |
 | <a href="/doc/img/brighter-yellow.png?raw=true"><img src="/doc/img/brighter-yellow.png?raw=true" width="350" /></a> | <a href="/doc/img/brighter-gold.png?raw=true"><img src="/doc/img/brighter-gold.png?raw=true" width="350" /></a> |
-| **default** `(set bg=light)` | **default** `(set bg=dark)` |
+
+Contrast with the default theme:
+
+| default (set bg=light) | default (set bg=dark) |
+| --- | --- |
 | <a href="/doc/img/default-bglite.png?raw=true"><img src="/doc/img/default-bglite.png?raw=true" width="350" /></a> | <a href="/doc/img/default-bgdark.png?raw=true"><img src="/doc/img/default-bgdark.png?raw=true" width="350" /></a> |
 
 (note: the colored parentheses/commas are from [`rainbow`](https://github.com/luochen1990/rainbow))
+
+## Compatibility
+
+I did not bother touching the gui colors. (they are retained from `default`)
+
+**Therefore, brighter.vim will not under any of these conditions:**
+* you use GVim
+* you have CSApprox installed
+* you use `neovim` with `set termguicolors`
+
+## Configuration
+
+If you want a couple of colors to be taken from the default color schemes,
+you can specify overrides:
+
+```vim
+" prior to setting the colorscheme
+let g:brighter_use_dark = ['comment']
+let g:brighter_use_light = ['special']
+```
+
+Valid names are [the primitive syntax types defined here in syncolor.vim](https://github.com/vim/vim/blob/071d427/runtime/syntax/syncolor.vim#L44-L52). (case-insensitive)
+
+I rather like the "golden"-looking dark yellow in
+`gnome-terminal`'s Tango colors, so I override the Statement color:
+
+```vim
+let g:brighter_use_light = ['statement']
+```
+
+Unfortunately, there is something funny about the
+default bg=light Statement color,
+which is that it is the *only color in the light theme
+that does not map to a 16-color color in 256 color mode*
+(instead mapping to an awful brown).
+
+Hence `brighter.vim` has an *additional* option to replace that nasty brown
+with the 16-color dark yellow.
+
+```vim
+set t_Co=256
+let g:brighter_use_light = ['statement']
+let g:brighter_brown_16 = 1 "note: no visible impact without the above lines
+```
