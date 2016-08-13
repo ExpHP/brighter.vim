@@ -5,10 +5,10 @@ This is a 16-color, terminal-only colorscheme for vim identical to
     :colorscheme default
     :set background=light
 
-except that it uses the lighter versions
-instead of the darker versions
-of the 16 standard terminal colors.
-This makes it suitable for a dark background.
+except that it uses the light variants
+in place of the dark variants
+of the 16 standard terminal colors,
+making it suitable for a dark background.
 This exists because for some incomprehensible reason,
 the *actual* default `background=dark` colorscheme
 is something completely different.
@@ -59,23 +59,21 @@ let g:brighter_brown_16 = 1 "note: no visible impact without the above lines
 
 ## Screenshots
 
-**Your mileage may vary**,
-because it uses the standard 16 terminal colors,
-which may be configurable in your terminal.
+**Your mileage may vary!!**
 
-Here is what it looks like using the default terminal background
-in Ubuntu 16.04 LTS, with `gnome-terminal` set to use the Tango scheme:
-(note: the colored parentheses/commas are not from this
- but from [`rainbow`](https://github.com/luochen1990/rainbow))
+It uses the standard 16 terminal colors,
+which may be configurable in your terminal;
+hence, these screenshots are only useful as a *comparison*.
 
-![(brighter)](/doc/img/brighter-yellow.png?raw=true ":colo brighter")
+* All images are in 256 color mode.
+* All images use the default terminal background for Ubuntu 16.04 LTS.
+* All images have the `gnome-terminal` theme set to Tango.
 
-For comparison, the **default themes** with `t_Co=256`,
-still against the Ubuntu 16 default background.
+|     |     |
+| --- | --- |
+| **brighter** (no overrides) | **brighter** (with my settings) |
+| <a href="/doc/img/brighter-yellow.png?raw=true"><img src="/doc/img/brighter-yellow.png?raw=true" width="350" /></a> | <a href="/doc/img/brighter-gold.png?raw=true"><img src="/doc/img/brighter-gold.png?raw=true" width="350" /></a> |
+| **default** `(set bg=light)` | **default** `(set bg=dark)` |
+| <a href="/doc/img/default-bglite.png?raw=true"><img src="/doc/img/default-bglite.png?raw=true" width="350" /></a> | <a href="/doc/img/default-bgdark.png?raw=true"><img src="/doc/img/default-bgdark.png?raw=true" width="350" /></a> |
 
-![(default bg=light)](/doc/img/default-bglite.png?raw=true ":colo default | set bg=light")
-![(default bg=dark)](/doc/img/default-bgdark.png?raw=true ":colo default | set bg=dark")
-
-And this is what I use (`brighter` with the options for 16-color brown).
-
-![(brighter with 16-color brown)](/doc/img/brighter-gold.png?raw=true ":colo brighter (with options for 16-color brown)")
+(note: the colored parentheses/commas are from [`rainbow`](https://github.com/luochen1990/rainbow))
