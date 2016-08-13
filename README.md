@@ -1,4 +1,4 @@
-### brighter
+# brighter.vim
 
 This is a 16-color, terminal-only colorscheme for vim identical to
 
@@ -14,7 +14,7 @@ the *actual* default `background=dark` colorscheme
 is something completely different.
 (and very pastel...)
 
-### Installation
+## Installation
 
 Install via your favorite vim plugin manager.
 
@@ -22,7 +22,7 @@ To activate it:
 
     :colorscheme brighter
 
-### Configuration
+## Configuration
 
 If you want a couple of colors to be taken from the default color schemes,
 you can specify overrides:
