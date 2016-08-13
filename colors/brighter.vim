@@ -57,8 +57,8 @@ function! s:get_colors()
 	let overrides += map(copy(cfg_use_lite), "[v:val, 'lite']")
 
 	for [syn_key, src_key] in overrides
-		let info = get(s:colorinfo, syn_key, -1)
-		if info == -1
+		let info = get(s:colorinfo, syn_key, {})
+		if info == {}
 			echoerr 'brighter.vim: Ignoring unknown key: '.syn_key
 		else
 			let colors[syn_key] = info[src_key]
