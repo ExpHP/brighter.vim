@@ -16,7 +16,12 @@ is something completely different.
 
 ## Installation
 
-Install via your favorite vim plugin manager.
+Install via your favorite vim plugin manager,
+[dein](https://github.com/Shougo/dein.vim).  
+(or [Pathogen](https://github.com/tpope/vim-pathogen),
+[Plug](https://github.com/junegunn/vim-plug),
+[Vundle](https://github.com/VundleVim/Vundle.vim)...)
+
 
 To activate it:
 
