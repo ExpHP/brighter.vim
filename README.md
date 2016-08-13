@@ -51,7 +51,7 @@ Contrast with the default theme:
 
 I did not bother touching the gui colors. (they are retained from `default`)
 
-**Therefore, brighter.vim will not under any of these conditions:**
+**Therefore, brighter.vim will not work under any of these conditions:**
 * you use GVim
 * you have CSApprox installed
 * you use `neovim` with `set termguicolors`
